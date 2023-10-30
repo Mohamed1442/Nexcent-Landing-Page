@@ -1,0 +1,164 @@
+@use "variables" as var;
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+// Main Header
+.main-header {
+  &__nav {
+    height: 6rem;
+    display: flex;
+  }
+
+  &__nav__list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.main-header__nav__list {
+  &__item {
+    margin: 0 1.2rem;
+    .item__link:link,
+    .item__link:visited {
+      color: var.$dark-gray;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: var.$medium;
+    }
+
+    .item__link:hover,
+    .item__link:active {
+      color: var.$gray;
+    }
+
+    .register-link:link,
+    .register-link:visited {
+      @extend %btn;
+    }
+
+    .register-link:hover,
+    .register-link:active {
+      @extend %btn;
+    }
+
+    .logo-link {
+      display: inline-block;
+    }
+
+    img {
+      display: inline-block;
+      width: 14rem;
+    }
+  }
+
+  &__item:first-child {
+    margin: 0;
+  }
+
+  &__item:nth-child(2) {
+    margin: 0 3rem 0 auto;
+  }
+}
+
+// Hero Section
+.section-hero {
+  position: relative;
+  background-color: var.$silver;
+  padding: 8rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.section-hero__description {
+  .main-heading {
+    font-size: 4.6rem;
+    margin-bottom: 1.2rem;
+    font-weight: var.$semi-bold;
+    color: var.$dark-gray;
+    .highlighted {
+      color: var.$primary-color;
+    }
+  }
+  .hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2.2rem;
+    color: var.$gray;
+  }
+  .register-link {
+    @extend %btn;
+  }
+}
+
+.slider {
+  display: flex;
+  gap: 0.55rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .dot {
+    cursor: pointer;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: var.$primary-tint;
+    border-radius: 50%;
+    border: none;
+    &.active {
+      background-color: var.$primary-color;
+    }
+  }
+}
+
+// Featured Section
+.section-featured {
+  padding: 3rem 0;
+  text-align: center;
+
+  .logos {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.featured-content {
+  .featured-heading {
+    font-size: 2.6rem;
+    font-weight: var.$semi-bold;
+    color: var.$dark-gray;
+    margin-bottom: 0.6rem;
+  }
+
+  .featured-description {
+    color: var.$gray;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+// utility classes
+.container {
+  max-width: 122rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}

@@ -1,0 +1,47 @@
+$primary-color: #4caf4f;
+$secondary-color: #263238;
+
+$primary-shade: #43a046;
+$primary-tint: #a5d6a7;
+
+// Neutrals
+$dark-gray: #4d4d4d;
+$gray: #717171;
+$light-gray: #89939e;
+$gray-blue: #abbed1;
+$silver: #f5f7fa;
+$white: #fff;
+
+// shadows
+$shadow-2px: 0 2px 4px rgba(171, 190, 209, 0.6);
+$shadow-4px: 0 4px 8px rgba(171, 190, 209, 0.4);
+$shadow-6px: 0 6px 12px rgba(171, 190, 209, 0.3);
+$shadow-8px: 0 8px 16px rgba(171, 190, 209, 0.4);
+$shadow-16px: 0 16px 32px rgba(171, 190, 209, 0.3);
+
+// Font weight
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+
+// Place holder
+%btn:link,
+%btn:visited {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: $white;
+  background-color: $primary-color;
+  padding: 1rem 1.8rem;
+  border-radius: 3px;
+  font-weight: 500;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+%btn:hover,
+%btn:active {
+  background-color: $primary-shade;
+}
+
+@mixin highited {
+}
