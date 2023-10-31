@@ -10,4 +10,5 @@ This landing page was built using the following technologies:
 
 - HTML
 - CSS
+- SASS
 - JavaScript
