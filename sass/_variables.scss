@@ -23,6 +23,7 @@ $shadow-16px: 0 16px 32px rgba(171, 190, 209, 0.3);
 $regular: 400;
 $medium: 500;
 $semi-bold: 600;
+$bold: 700;
 
 // Place holder
 %btn:link,
@@ -43,5 +44,38 @@ $semi-bold: 600;
   background-color: $primary-shade;
 }
 
-@mixin highited {
+%flat-btn:link,
+%flat-btn:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: $primary-color;
+  font-weight: $semi-bold;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+%flat-btn:hover,
+%flat-btn:active {
+  color: $primary-shade;
+}
+
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == medium) {
+    // 800px
+    @media (max-width: 50em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == small) {
+    // 720px
+    @media (max-width: 45em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == xsmall) {
+    // 600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
 }
